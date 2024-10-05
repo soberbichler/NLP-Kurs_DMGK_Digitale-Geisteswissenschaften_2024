@@ -3,81 +3,134 @@
     margin: 0;
     padding: 0;
 }
+
 body, html {
-    width: 100%;
-    overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    height: 100%;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     background-color: #8B0000;
     color: white;
-    text-align: center;
     padding: 1rem;
-    width: 100%;
+    display: flex;
+    align-items: center;
 }
+
 .logo svg {
-    max-width: 100px;
-    height: auto;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
 }
-h1 {
-    font-size: 1.8em;
-    margin: 0.5rem 0;
+
+.title h1 {
+    font-size: 1.2em;
+    margin-bottom: 0.2rem;
 }
-ul {
-    background-color: #f2f2f2;
-    padding: 20px 20px 20px 40px;
-    border-radius: 5px;
+
+.title p {
+    font-size: 0.9em;
+    opacity: 0.8;
 }
-main {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f0f0f0;
     padding: 1rem;
+    height: calc(100vh - 80px);
+    position: fixed;
+    top: 80px;
+    left: 0;
+    overflow-y: auto;
 }
+
+.sidebar h2 {
+    color: #8B0000;
+    border-bottom: 2px solid #8B0000;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: #8B0000;
+}
+
+main {
+    flex: 1;
+    margin-left: 250px;
+    padding: 2rem;
+}
+
 section {
     background-color: white;
-    margin-bottom: 1rem;
-    padding: 1rem;
+    margin-bottom: 2rem;
+    padding: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 h2 {
     color: #8B0000;
     border-bottom: 2px solid #8B0000;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
-h3 {
-    color: #8B0000;
-    margin-bottom: 0.5rem;
-}
+
 ul {
     padding-left: 1.5rem;
 }
+
 li {
     margin-bottom: 0.5rem;
 }
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100%;
 }
-@media (max-width: 600px) {
-    h1 {
-        font-size: 1.5em;
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
     }
-    h2 {
-        font-size: 1.3em;
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        margin-bottom: 1rem;
     }
-    h3 {
-        font-size: 1.1em;
-    }
-    .logo svg {
-        max-width: 80px;
+
+    main {
+        margin-left: 0;
     }
 }
