@@ -14,8 +14,8 @@ body, html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
     min-height: 100vh;
 }
 
@@ -39,7 +39,6 @@ h1 {
 
 .content-wrapper {
     display: flex;
-    flex: 1;
     overflow: hidden;
 }
 
@@ -125,7 +124,6 @@ footer {
 
     .sidebar {
         width: 100%;
-        order: -1;
     }
     
     h1 {
