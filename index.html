@@ -1,1 +1,135 @@
 <html><body><h1>Welcome to NLP-Kurs DMGK</h1></body></html>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NLP-Kurs Programm</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide {
+            width: 900px;
+            height: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            overflow: hidden;
+        }
+        .logo-section {
+            width: 200px;
+            background-color: #8B0000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        .content-section {
+            flex-grow: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        h1 {
+            color: #8B0000;
+            margin-bottom: 20px;
+        }
+        .session {
+            margin-bottom: 15px;
+        }
+        .date {
+            font-weight: bold;
+            color: #8B0000;
+        }
+        ul {
+            margin: 5px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="logo-section">
+            <svg width="150" height="150" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="80" fill="#ffffff"/>
+                <text x="100" y="70" font-family="Arial, sans-serif" font-size="40" fill="#8B0000" text-anchor="middle">NLP</text>
+                <g fill="none" stroke="#8B0000" stroke-width="4">
+                    <path d="M40,120 Q100,160 160,120"/>
+                    <circle cx="40" cy="120" r="5" fill="#8B0000"/>
+                    <circle cx="100" cy="140" r="5" fill="#8B0000"/>
+                    <circle cx="160" cy="120" r="5" fill="#8B0000"/>
+                </g>
+            </svg>
+            <div style="text-align: center; margin-top: 10px;">Kurs 2024-2025</div>
+        </div>
+        <div class="content-section">
+            <h1>NLP-Kurs Programm</h1>
+            <div class="session">
+                <div class="date">Termin 1: 25. Oktober 2024 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>Einführung in das Thema, in den Kurs und NLP</li>
+                    <li>Crash Kurs Python 1</li>
+                </ul>
+            </div>
+            <div class="session">
+                <div class="date">Termin 2: 08. November 2024 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>Crash Kurs Python 2/Einführung Colab Notebooks</li>
+                    <li>Einführung in NLP mit SpaCy</li>
+                </ul>
+            </div>
+            <div class="session">
+                <div class="date">Termin 3: 22. November 2024 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>Das Deutsche Zeitungsportal: Einführung und API-Nutzung</li>
+                    <li>(Gäste: Lisa Landes und Michael Büchner von der Deutschen Digitalen Bibliothek)</li>
+                </ul>
+            </div>
+            <div class="session">
+                <div class="date">Termin 4: 06. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>Aktuelle Fortschritte im NLP: Transformer-Modelle</li>
+                    <li>NLP für die semantische Suche und Textähnlichkeit (Word Embeddings)</li>
+                </ul>
+            </div>
+            <div class="session">
+                <div class="date">Termin 5: 20. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>Aktuelle Fortschritte im NLP: große Sprachmodelle (LLMs)</li>
+                    <li>NLP und Textverarbeitungstechniken für Dokumentenanalyse:
+                        <ul>
+                            <li>Semantische Extraktion (Artikelsegmentierung)</li>
+                            <li>Post-OCR-Korrektur</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="session">
+                <div class="date">Termin 6: 10. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>NLP für Entitätenextrahierung (Named Entity Recognition/NER)</li>
+                    <li>NLP für Textklassifizierung</li>
+                </ul>
+            </div>
+            <div class="session">
+                <div class="date">Termin 7: 24. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</div>
+                <ul>
+                    <li>Individuelle Besprechungstermine</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
