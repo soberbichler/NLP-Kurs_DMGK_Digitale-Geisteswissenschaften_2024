@@ -1,6 +1,12 @@
-body, html {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -12,26 +18,30 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
+    width: 100%;
 }
 
-.logo {
-    margin-bottom: 1rem;
+.logo svg {
+    max-width: 100px;
+    height: auto;
 }
 
 h1 {
-    margin: 0;
+    font-size: 1.8em;
+    margin: 0.5rem 0;
 }
 
 main {
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem;
 }
 
 section {
     background-color: white;
-    margin-bottom: 2rem;
-    padding: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -40,14 +50,16 @@ h2 {
     color: #8B0000;
     border-bottom: 2px solid #8B0000;
     padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 h3 {
     color: #8B0000;
+    margin-bottom: 0.5rem;
 }
 
 ul {
-    padding-left: 20px;
+    padding-left: 1.5rem;
 }
 
 li {
@@ -59,17 +71,23 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
 
 @media (max-width: 600px) {
-    main {
-        padding: 1rem;
+    h1 {
+        font-size: 1.5em;
     }
-    
-    section {
-        padding: 1rem;
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    .logo svg {
+        max-width: 80px;
     }
 }
