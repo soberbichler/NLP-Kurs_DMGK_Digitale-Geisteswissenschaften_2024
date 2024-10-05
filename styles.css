@@ -24,6 +24,10 @@ header {
     text-align: center;
     padding: 1rem;
     width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo svg {
@@ -38,7 +42,7 @@ h1 {
 
 .content-wrapper {
     display: flex;
-    flex: 1;
+    margin-top: 150px; /* Adjust this value based on your header height */
 }
 
 .sidebar {
@@ -46,7 +50,7 @@ h1 {
     background-color: #f4f4f4;
     padding: 1rem;
     position: fixed;
-    top: 0;
+    top: 150px; /* Should match the margin-top of .content-wrapper */
     bottom: 0;
     left: 0;
     overflow-y: auto;
@@ -54,7 +58,6 @@ h1 {
 
 .sidebar h2 {
     color: #8B0000;
-    margin-top: 1rem;
     border-bottom: 2px solid #8B0000;
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
@@ -122,19 +125,21 @@ footer {
 }
 
 @media (max-width: 800px) {
+    .content-wrapper {
+        flex-direction: column;
+        margin-top: 120px; /* Adjust for smaller header on mobile */
+    }
+
     .sidebar {
         width: 100%;
         position: static;
         margin-bottom: 1rem;
+        top: auto;
     }
     
     main {
         margin-left: 0;
         width: 100%;
-    }
-    
-    .content-wrapper {
-        flex-direction: column;
     }
     
     h1 {
