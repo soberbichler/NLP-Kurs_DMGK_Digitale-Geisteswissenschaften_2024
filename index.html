@@ -8,39 +8,98 @@
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <div class="logo-title">
-                <div class="logo">
-                    <svg viewBox="0 0 200 200" width="60" height="60">
-                        <circle cx="100" cy="100" r="80" fill="#ffffff"/>
-                        <text x="100" y="70" font-family="Arial, sans-serif" font-size="40" fill="#8B0000" text-anchor="middle">NLP</text>
-                        <g fill="none" stroke="#8B0000" stroke-width="4">
-                            <path d="M40,120 Q100,160 160,120"/>
-                            <circle cx="40" cy="120" r="5" fill="#8B0000"/>
-                            <circle cx="100" cy="140" r="5" fill="#8B0000"/>
-                            <circle cx="160" cy="120" r="5" fill="#8B0000"/>
-                        </g>
-                    </svg>
-                </div>
-                <div class="title">
-                    <h1>NLP-Kurs für digitale Geistes- und Kulturwissenschaften</h1>
-                    <p>Masterprogramm DMGK Mainz</p>
-                </div>
-            </div>
-            <nav class="header-nav">
-                <ul>
-                    <li><a href="#">GitHub</a></li>
-                    <li><a href="#">Colab</a></li>
-                    <li><a href="#">DDB</a></li>
-                    <li><a href="#">spaCy</a></li>
-                    <li><a href="#">Moodle</a></li>
-                    <li><a href="#">Literatur</a></li>
-                </ul>
-            </nav>
+        <div class="logo">
+            <svg viewBox="0 0 200 200" width="100" height="100">
+                <circle cx="100" cy="100" r="80" fill="#ffffff"/>
+                <text x="100" y="70" font-family="Arial, sans-serif" font-size="40" fill="#8B0000" text-anchor="middle">NLP</text>
+                <g fill="none" stroke="#8B0000" stroke-width="4">
+                    <path d="M40,120 Q100,160 160,120"/>
+                    <circle cx="40" cy="120" r="5" fill="#8B0000"/>
+                    <circle cx="100" cy="140" r="5" fill="#8B0000"/>
+                    <circle cx="160" cy="120" r="5" fill="#8B0000"/>
+                </g>
+            </svg>
         </div>
+        <h1>NLP-Kurs für digitale Geistes- und Kulturwissenschaften</h1>
+        <p>Masterprogramm DMGK Mainz </p>
     </header>
 
-    <!-- Rest of your body content -->
+    <main>
+        <section id="about">
+            <h2>Über den Kurs</h2>
+            <p>Willkommen zu unserem Kurs! Hier lernen Sie die Grundlagen der computergestützten Verarbeitung natürlicher Sprache (NLP) und deren praktische Anwendung kennen. Sie werden mit den digitalisierten Zeitungsbeständen der Deutschen Digitalen Bibliothek arbeiten und sich auf den Themenschwerpunkt "Natur- und Umweltkatastrophen in Medien" konzentrieren.</p>
+            
+                <p>Nach dem Kurs können Sie:</p>
+                
+                <ul>
+                    <li>Wesentliche Python-Pakete für NLP-Aufgaben an eigenen Daten anwenden</li>
+                    <li>Große Datensätze für die weitere Analyse vorbereiten</li>
+                    <li>Transformer-Modelle und Large Language Models für NLP-Aufgaben mit großen Datenmengen einsetzen</li>
+                    <li>Die Anwendung verschiedener NLP-Methoden kritisch reflektieren</li>
+                    <li>Ihre Forschungsergebnisse in einem wissenschaftlichen Paper verarbeiten</li>
+                </ul>
+        </section>
 
+        <section id="schedule">
+            <h2>Kursplan</h2>
+            <div class="session">
+                <h3>Termin 1: 25. Oktober 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>Einführung in das Thema, in den Kurs und NLP</li>
+                    <li>Crash Kurs Python 1</li>
+                </ul>
+            </div>
+            <div class="session">
+                <h3>Termin 2: 08. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>Crash Kurs Python 2/Einführung Colab Notebooks</li>
+                    <li>Einführung in NLP mit SpaCy</li>
+                </ul>
+            </div>
+            <div class="session">
+                <h3>Termin 3: 22. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>Das Deutsche Zeitungsportal: Einführung und API-Nutzung</li>
+                    <li>(Gäste: Lisa Landes und Michael Büchner von der Deutschen Digitalen Bibliothek)</li>
+                </ul>
+            </div>
+            <div class="session">
+                <h3>Termin 4: 06. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>Aktuelle Fortschritte im NLP: Transformer-Modelle</li>
+                    <li>NLP für die semantische Suche und Textähnlichkeit (Word Embeddings)</li>
+                </ul>
+            </div>
+            <div class="session">
+                <h3>Termin 5: 20. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>Aktuelle Fortschritte im NLP: große Sprachmodelle (LLMs)</li>
+                    <li>NLP und Textverarbeitungstechniken für Dokumentenanalyse:
+                        <ul>
+                            <li>Semantische Extraktion (Artikelsegmentierung)</li>
+                            <li>Post-OCR-Korrektur</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="session">
+                <h3>Termin 6: 10. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>NLP für Entitätenextrahierung (Named Entity Recognition/NER)</li>
+                    <li>NLP für Textklassifizierung</li>
+                </ul>
+            </div>
+            <div class="session">
+                <h3>Termin 7: 24. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
+                <ul>
+                    <li>Individuelle Besprechungstermine</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NLP-Kurs DMGK. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
