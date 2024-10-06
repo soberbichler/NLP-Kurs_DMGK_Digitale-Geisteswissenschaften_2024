@@ -215,7 +215,6 @@ footer {
     position: absolute;
     left: 0;
     color: #8B0000;
-}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -234,4 +233,9 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+.content-wrapper {
+    display: flex;
+    margin: 1rem;
 }
