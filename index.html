@@ -4,7 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NLP-Kurs DMGK - Digitale Geisteswissenschaften</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f4f4f4;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #8B0000;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .content-wrapper {
+            display: flex;
+            margin: 1rem;
+        }
+        .sidebar {
+            flex: 1;
+            background-color: #f4f4f4;
+            padding: 1rem;
+        }
+        main {
+            flex: 3;
+            padding: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -22,6 +73,12 @@
         </div>
         <h1>NLP-Kurs für digitale Geistes- und Kulturwissenschaften</h1>
         <p>Masterprogramm DMGK Mainz</p>
+        <nav>
+            <ul>
+                <li><a href="#about">Über den Kurs</a></li>
+                <li><a href="#schedule">Kursplan</a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="content-wrapper">
@@ -37,70 +94,61 @@
             </ul>
         </aside>
 
- <main>
-         <section id="about">
-            <h2>Über den Kurs</h2>
+        <main>
+            <section id="about">
+                <h2>Über den Kurs</h2>
+                <p>Dieser Kurs bietet eine Einführung in die computergestützte Verarbeitung natürlicher Sprache (NLP) und deren Anwendung in den Geistes- und Kulturwissenschaften. Die Teilnehmenden arbeiten mit digitalisierten Zeitungsbeständen der Deutschen Digitalen Bibliothek und untersuchen den Themenschwerpunkt "Natur- und Umweltkatastrophen in Medien". Dabei werden sowohl theoretische Grundlagen als auch praktische Anwendungen von NLP-Methoden vermittelt.</p>
             
-            <p>Dieser Kurs bietet eine Einführung in die computergestützte Verarbeitung natürlicher Sprache (NLP) und deren Anwendung in den Geistes- und Kulturwissenschaften. Die Teilnehmenden arbeiten mit digitalisierten Zeitungsbeständen der Deutschen Digitalen Bibliothek und untersuchen den Themenschwerpunkt "Natur- und Umweltkatastrophen in Medien". Dabei werden sowohl theoretische Grundlagen als auch praktische Anwendungen von NLP-Methoden vermittelt.</p>
-        
-            <h3>Kursinhalte und Methodik:</h3>
+                <h3>Kursinhalte und Methodik:</h3>
+                <ul>
+                    <li><strong>Praktische Anwendung:</strong> Die Studierenden erlernen die Anwendung von NLP-Werkzeugen auf konkrete Forschungsfragen. Hierbei werden die digitalisierten Zeitungsbestände der Deutschen Digitalen Bibliothek als Datengrundlage genutzt und moderne Analysemethoden eingesetzt.</li>
+                    <li><strong>Thematischer Schwerpunkt:</strong> Der Kurs fokussiert sich auf die Untersuchung von Natur- und Umweltkatastrophen in Medien. Es wird analysiert, wie diese Ereignisse in historischen und aktuellen Medienberichten dargestellt und diskutiert werden.</li>
+                    <li><strong>Interdisziplinäre Ansätze:</strong> Es wird erarbeitet, wie NLP-Technologien neue Perspektiven auf kulturelle, historische und gesellschaftliche Fragestellungen eröffnen können. Dabei wird auch reflektiert, wie diese Methoden traditionelle geisteswissenschaftliche Ansätze ergänzen und erweitern.</li>
+                </ul>
             
-            <ul>
-                <li><strong>Praktische Anwendung:</strong> Die Studierenden erlernen die Anwendung von NLP-Werkzeugen auf konkrete Forschungsfragen. Hierbei werden die digitalisierten Zeitungsbestände der Deutschen Digitalen Bibliothek als Datengrundlage genutzt und moderne Analysemethoden eingesetzt.</li>
-        
-                <li><strong>Thematischer Schwerpunkt:</strong> Der Kurs fokussiert sich auf die Untersuchung von Natur- und Umweltkatastrophen in Medien. Es wird analysiert, wie diese Ereignisse in historischen und aktuellen Medienberichten dargestellt und diskutiert werden.</li>
-        
-                <li><strong>Interdisziplinäre Ansätze:</strong> Es wird erarbeitet, wie NLP-Technologien neue Perspektiven auf kulturelle, historische und gesellschaftliche Fragestellungen eröffnen können. Dabei wird auch reflektiert, wie diese Methoden traditionelle geisteswissenschaftliche Ansätze ergänzen und erweitern.</li>
-        
-            </ul>
-        
-            <h3>Lernziele:</h3>
+                <h3>Lernziele:</h3>
+                <ul>
+                    <li>Anwendung relevanter Python-Pakete für NLP-Aufgaben auf eigene Forschungsdaten</li>
+                    <li>Vorbereitung und Strukturierung großer Datensätze für die Analyse</li>
+                    <li>Einsatz von Transformer-Modellen und Large Language Models für NLP-Aufgaben mit umfangreichen Datenmengen</li>
+                    <li>Kritische Reflexion verschiedener Methoden (Methodenkritik)</li>
+                    <li>Verfassen eines wissenschaftlichen Papers zu den Forschungsergebnissen</li>
+                </ul>
+            </section>
             
-            <ul>
-                <li>Anwendung relevanter Python-Pakete für NLP-Aufgaben auf eigene Forschungsdaten</li>
-        
-                <li>Vorbereitung und Strukturierung großer Datensätze für die Analyse</li>
-        
-                <li>Einsatz von Transformer-Modellen und Large Language Models für NLP-Aufgaben mit umfangreichen Datenmengen</li>
-        
-                <li>Kritische Reflexion verschiedener Methoden (Methodenkritik)</li>
-        
-                <li>Verfassen eines wissenschaftlichen Papers zu den Forschungsergebnissen</li>
-            </ul>
-        </section>
-        <section id="schedule">
-            <h2>Kursplan</h2>
-            <div class="session">
-                <h3>Modul 1: 25. Oktober 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Einführung in das Thema, in den Kurs und NLP • Crash Kurs Python 1</p>
-            </div>
-            <div class="session">
-                <h3>Modul 2: 08. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Crash Kurs Python 2/Einführung Colab Notebooks • Einführung in NLP mit SpaCy</p>
-            </div>
-            <div class="session">
-                <h3>Modul 3: 22. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Das Deutsche Zeitungsportal: Einführung und API-Nutzung<br>
-                (Gäste: Lisa Landes und Michael Büchner von der Deutschen Digitalen Bibliothek)</p>
-            </div>
-            <div class="session">
-                <h3>Modul 4: 06. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Aktuelle Fortschritte im NLP: Transformer Modelle für die semantische Suche</p>
-            </div>
-            <div class="session">
-                <h3>Modul 5: 20. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Aktuelle Fortschritte im NLP: große Sprachmodelle für Artikelsegmentierung und Post-OCR-Korrektur</p>
-            </div>
-            <div class="session">
-                <h3>Modul 6: 10. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Named Entity Recognition und Textklassifizierung</p>
-            </div>
-            <div class="session">
-                <h3>Modul 7: 24. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
-                <p>Individuelle Besprechungstermine</p>
-            </div>
-        </section>
-    </main>
+            <section id="schedule">
+                <h2>Kursplan</h2>
+                <div class="session">
+                    <h3>Modul 1: 25. Oktober 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Einführung in das Thema, in den Kurs und NLP • Crash Kurs Python 1</p>
+                </div>
+                <div class="session">
+                    <h3>Modul 2: 08. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Crash Kurs Python 2/Einführung Colab Notebooks • Einführung in NLP mit SpaCy</p>
+                </div>
+                <div class="session">
+                    <h3>Modul 3: 22. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Das Deutsche Zeitungsportal: Einführung und API-Nutzung<br>
+                    (Gäste: Lisa Landes und Michael Büchner von der Deutschen Digitalen Bibliothek)</p>
+                </div>
+                <div class="session">
+                    <h3>Modul 4: 06. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Aktuelle Fortschritte im NLP: Transformer Modelle für die semantische Suche</p>
+                </div>
+                <div class="session">
+                    <h3>Modul 5: 20. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Aktuelle Fortschritte im NLP: große Sprachmodelle für Artikelsegmentierung und Post-OCR-Korrektur</p>
+                </div>
+                <div class="session">
+                    <h3>Modul 6: 10. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Named Entity Recognition und Textklassifizierung</p>
+                </div>
+                <div class="session">
+                    <h3>Modul 7: 24. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
+                    <p>Individuelle Besprechungstermine</p>
+                </div>
+            </section>
+        </main>
     </div>
 
     <footer>
