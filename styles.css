@@ -215,27 +215,29 @@ footer {
     position: absolute;
     left: 0;
     color: #8B0000;
+nav {
+    text-align: center;
+    padding: 10px 0;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 15px;
 }
 
 nav ul li a {
+    color: white;
     text-decoration: none;
-    color: #8B0000;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
-}
-
-.content-wrapper {
-    display: flex;
-    margin: 1rem;
 }
