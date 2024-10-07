@@ -79,3 +79,22 @@
     <p><strong>Hinweis:</strong> Um Zugriff auf LLaMA 3.1 70B zu erhalten, müssen Sie möglicherweise zusätzliche Schritte durchführen, wie z.B. eine Anfrage für Zugang zu stellen oder bestimmte Nutzungsbedingungen zu akzeptieren. Überprüfen Sie die spezifischen Anforderungen für LLaMA 3.1 70B auf der Hugging Face-Plattform.</p>
 </body>
 </html>
+`;
+
+const AnleitungenLink = () => {
+  const encodedContent = encodeURIComponent(htmlContent);
+  const dataUri = `data:text/html;charset=utf-8,${encodedContent}`;
+
+  return (
+    <a 
+      href={dataUri} 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-red-700 hover:text-red-900 hover:underline"
+    >
+      Anleitungen GitHub und HuggingFace
+    </a>
+  );
+};
+
+export default AnleitungenLink;
