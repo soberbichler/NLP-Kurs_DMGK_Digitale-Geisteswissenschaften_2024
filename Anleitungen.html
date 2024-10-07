@@ -80,22 +80,3 @@
     </ol>
 </body>
 </html>
-`;
-
-const AnleitungenLink = () => {
-  const encodedContent = encodeURIComponent(htmlContent);
-  const dataUri = `data:text/html;charset=utf-8,${encodedContent}`;
-
-  return (
-    <a 
-      href={dataUri} 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="text-red-700 hover:text-red-900 hover:underline"
-    >
-      Anleitungen GitHub und HuggingFace
-    </a>
-  );
-};
-
-export default AnleitungenLink;
