@@ -87,20 +87,26 @@
             margin-bottom: 8px;
             padding: 3px 0;
             font-size: 14px;
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
         }
         .term {
             font-weight: bold;
             margin-right: 5px;
         }
         .edit-delete-buttons {
-            white-space: nowrap;
+            margin-top: 5px;
         }
         .edit-delete-buttons button {
             padding: 2px 5px;
             font-size: 11px;
+        }
+        .editable {
+            border: 1px solid transparent;
+            padding: 2px;
+            border-radius: 3px;
+        }
+        .editable:focus {
+            border-color: #aaa;
+            outline: none;
         }
     </style>
 </head>
@@ -188,9 +194,11 @@
                     const itemElement = document.createElement('div');
                     itemElement.className = 'glossary-item';
                     itemElement.innerHTML = `
-                        <div><span class="term">${item.term}:</span> ${item.definition}</div>
+                        <div>
+                            <span class="term" contenteditable="true" onblur="updateEntry(${item.id}, this, 'term')">${item.term}:</span>
+                            <span contenteditable="true" onblur="updateEntry(${item.id}, this, 'definition')">${item.definition}</span>
+                        </div>
                         <div class="edit-delete-buttons">
-                            <button onclick="editEntry(${item.id})">Edit</button>
                             <button onclick="deleteEntry(${item.id})">Delete</button>
                         </div>
                     `;
@@ -201,17 +209,15 @@
             });
         }
 
-        function editEntry(id) {
+        function updateEntry(id, element, field) {
             const entry = glossary.find(item => item.id === id);
             if (entry) {
-                const newTerm = prompt("Edit term:", entry.term);
-                const newDefinition = prompt("Edit definition:", entry.definition);
-                if (newTerm !== null && newDefinition !== null) {
-                    entry.term = newTerm;
-                    entry.definition = newDefinition;
-                    saveGlossary();
-                    updateGlossaryDisplay();
+                entry[field] = element.innerText.trim();
+                if (field === 'term') {
+                    entry.term = entry.term.replace(':', '');
                 }
+                saveGlossary();
+                updateGlossaryDisplay();
             }
         }
 
