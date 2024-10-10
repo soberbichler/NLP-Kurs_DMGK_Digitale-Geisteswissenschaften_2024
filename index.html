@@ -1,152 +1,104 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NLP-Kurs DMGK - Digitale Geisteswissenschaften</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <svg viewBox="0 0 200 200" width="100" height="100">
-                <circle cx="100" cy="100" r="80" fill="#ffffff"/>
-                <text x="100" y="70" font-family="Arial, sans-serif" font-size="40" fill="#8B0000" text-anchor="middle">NLP</text>
-                <g fill="none" stroke="#8B0000" stroke-width="4">
-                    <path d="M40,120 Q100,160 160,120"/>
-                    <circle cx="40" cy="120" r="5" fill="#8B0000"/>
-                    <circle cx="100" cy="140" r="5" fill="#8B0000"/>
-                    <circle cx="160" cy="120" r="5" fill="#8B0000"/>
-                </g>
-            </svg>
-        </div>
-        <h1>NLP-Kurs für digitale Geistes- und Kulturwissenschaften</h1>
-        <p>Masterprogramm DMGK Mainz</p>
-
-<header>
-    <nav style="margin-top: 1.5rem;">
-        <ul style="display: flex; justify-content: center; gap: 20px; padding: 0; list-style-type: none;">
-            <li>
-                <a href="#about" style="color: #FFFFFF; text-decoration: none; font-weight: 400; text-transform: uppercase; font-size: 0.8em; letter-spacing: 1px; padding: 8px 16px; border: 1px solid rgba(255,215,0,0.3); border-radius: 2px; transition: all 0.3s ease;">Über den Kurs</a>
-            </li>
-            <li>
-                <a href="#schedule" style="color: #FFFFFF; text-decoration: none; font-weight: 400; text-transform: uppercase; font-size: 0.8em; letter-spacing: 1px; padding: 8px 16px; border: 1px solid rgba(255,215,0,0.3); border-radius: 2px; transition: all 0.3s ease;">Kursplan</a>
-            </li>
-            <li>
-                <a href="#modules" style="color: #FFFFFF; text-decoration: none; font-weight: 400; text-transform: uppercase; font-size: 0.8em; letter-spacing: 1px; padding: 8px 16px; border: 1px solid rgba(255,215,0,0.3); border-radius: 2px; transition: all 0.3s ease;">Module und Workloads</a>
-            </li>
-            <li>
-                <a href="#literature" style="color: #FFFFFF; text-decoration: none; font-weight: 400; text-transform: uppercase; font-size: 0.8em; letter-spacing: 1px; padding: 8px 16px; border: 1px solid rgba(255,215,0,0.3); border-radius: 2px; transition: all 0.3s ease;">Literaturliste</a>
-            </li>
+<div class="content-wrapper">
+    <aside class="sidebar">
+        <h2>Important Links</h2>
+        <ul>
+            <li><a href="https://github.com/ieg-dhr/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften">GitHub Repository</a></li>
+            <li><a href="https://mattermost.gitlab.rlp.net/natural-language-processing---wise-202425/channels/town-square">Mattermost</a></li>
+            <li><a href="#">Moodle Course Room</a></li>
+            <li><a href="Glossary.html">Glossary</a></li>
+            <li><a href="Instructions.html">Instructions for GitHub and HuggingFace</a></li>
+            <li><a href="https://www.marqo.ai/blog/getting-started-with-google-colab-a-beginners-guide">Google Colab Documentation</a></li>
+            <li><a href="https://www.deutsche-digitale-bibliothek.de/newspaper">German Newspaper Portal</a></li>
+            <li><a href="https://spacy.io/usage/spacy-101">spaCy Documentation</a></li>
         </ul>
-    </nav>
-</header>
-    </header>
+    </aside>
 
-    <div class="content-wrapper">
-        <aside class="sidebar">
-            <h2>Wichtige Links</h2>
+    <main>
+        <section id="about">
+            <h2>About the Course</h2>
+            <p>Instructor: Sarah Oberbichler</p>
+            <p>This course offers an introduction to Natural Language Processing (NLP) and its application in the humanities and cultural studies. Participants work with digitized newspaper collections from the German Digital Library and examine the topic of "Natural and Environmental Disasters in Media". Both theoretical foundations and practical applications of NLP methods are taught.</p>
+        
+            <h3>Course Content and Methodology:</h3>
             <ul>
-                <li><a href="https://github.com/ieg-dhr/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften">GitHub Repository</a></li>
-                <li><a href="https://mattermost.gitlab.rlp.net/natural-language-processing---wise-202425/channels/town-square">Mattermost</a></li>
-                <li><a href="#">Moodle Kursraum</a></li>
-                <li><a href="Glossary.html">Glossar</a></li>
-                <li><a href="Anleitungen.html">Anleitungen GitHub und HuggingFace</a></li>
-                <li><a href="https://www.marqo.ai/blog/getting-started-with-google-colab-a-beginners-guide">Google Colab Documentation</a></li>
-                <li><a href="https://www.deutsche-digitale-bibliothek.de/newspaper">Deutsches Zeitungsportal</a></li>
-                <li><a href="https://spacy.io/usage/spacy-101">spaCy Dokumentation</a></li>
-
+                <li><strong>Practical Application:</strong> Students learn to apply NLP tools to specific research questions. The digitized newspaper collections of the German Digital Library are used as a data basis, and modern analysis methods are employed.</li>
+                <li><strong>Thematic Focus:</strong> The course focuses on the examination of natural and environmental disasters in media. It analyzes how these events are presented and discussed in historical and current media reports.</li>
+                <li><strong>Interdisciplinary Approaches:</strong> The course explores how NLP technologies can open up new perspectives on cultural, historical, and social issues. It also reflects on how these methods complement and extend traditional humanities approaches.</li>
             </ul>
-        </aside>
+        
+            <h3>Learning Objectives:</h3>
+            <ul>
+                <li>Application of relevant Python packages for NLP tasks on own research data</li>
+                <li>Preparation and structuring of large datasets for analysis</li>
+                <li>Use of transformer models and large language models for NLP tasks with extensive data volumes</li>
+                <li>Critical reflection on various methods (methodology critique)</li>
+                <li>Writing a scientific paper on the research results</li>
+            </ul>
+        </section>
+        
+        <section id="schedule">
+            <h2>Course Schedule</h2>
+            <div class="session">
+                <h3>Module 1: October 25, 2024 (10:00 AM to 11:30 AM)</h3>
+                <p>Introduction to the topic, the course, and NLP • Introduction to Colab Notebooks • Python Crash Course 1</p>
+            </div>
+            <div class="session">
+                <h3>Module 2: November 8, 2024 (10:00 AM to 11:30 AM)</h3>
+                <p>Python Crash Course 2 • Introduction to NLP with SpaCy</p>
+            </div>
+            <div class="session">
+                <h3>Module 3: November 15, 2024 (10:00 AM to 11:30 AM)</h3>
+                <p>The German Newspaper Portal: Introduction and API Usage<br>
+                (Guests: Lisa Landes and Michael Büchner from the German Digital Library)</p>
+            </div>
+            <div class="session">
+                <h3>Module 4: November 22, 2024 (10:00 AM to 11:30 AM)</h3>
+                <p>Transformer Models for Semantic Search</p>
+            </div>
+            <div class="session">
+                <h3>Module 5: December 6, 2024 (10:00 AM to 11:30 AM)</h3>
+                <p>Large Language Models for Article Segmentation and Post-OCR Correction</p>
+            </div>
+            <div class="session">
+                <h3>Module 6: January 10, 2025 (10:00 AM to 11:30 AM)</h3>
+                <p>Named Entity Recognition and Text Classification</p>
+            </div>
+            <div class="session">
+                <h3>Module 7: January 24, 2025 (10:00 AM to 11:30 AM)</h3>
+                <p>Individual Consultation Appointments</p>
+            </div>
+        </section>
+        <section id="modules">
+            <h2>Modules and Workloads</h2>
+            <div class="session">
+              <h3>Module 1</h3>
+                
+              <h4>Preparation for Module 1:</h4>
+              <ul>
+                <li>Create GitHub and HuggingFace accounts (see instructions for GitHub and HuggingFace under "Important Links").</li>
+                <li>Open Google Colab Documentation (also under "Important Links") and complete steps 1 to 4.</li>
+              </ul>
+              <h4>Notebooks</h4>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <p style="margin: 0;">Python_CrashCourse_1</p>
+                <a href="https://colab.research.google.com/github/ieg-dhr/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/blob/main/Python_CrashCourse_1.ipynb" target="_blank">
+                  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Python_CrashCourse_1 In Colab"/>
+                </a>
+              </div>
+              &nbsp;
+              <h4>Literature:</h4> 
+              <p>[Insert literature references here]</p>
+            </div>
+         </section>
+         <section id="literature">
+            <h2>Literature List</h2>
+            <div class="session">
+               
+            </div>
+         </section>
+    </main>
+</div>
 
-        <main>
-            <section id="about">
-                <h2>Über den Kurs</h2>
-                <p>Dozentin: Sarah Oberbichler</p>
-                <p>Dieser Kurs bietet eine Einführung in die computergestützte Verarbeitung natürlicher Sprache (NLP) und deren Anwendung in den Geistes- und Kulturwissenschaften. Die Teilnehmenden arbeiten mit digitalisierten Zeitungsbeständen der Deutschen Digitalen Bibliothek und untersuchen den Themenschwerpunkt "Natur- und Umweltkatastrophen in Medien". Dabei werden sowohl theoretische Grundlagen als auch praktische Anwendungen von NLP-Methoden vermittelt.</p>
-            
-                <h3>Kursinhalte und Methodik:</h3>
-                <ul>
-                    <li><strong>Praktische Anwendung:</strong> Die Studierenden erlernen die Anwendung von NLP-Werkzeugen auf konkrete Forschungsfragen. Hierbei werden die digitalisierten Zeitungsbestände der Deutschen Digitalen Bibliothek als Datengrundlage genutzt und moderne Analysemethoden eingesetzt.</li>
-                    <li><strong>Thematischer Schwerpunkt:</strong> Der Kurs fokussiert sich auf die Untersuchung von Natur- und Umweltkatastrophen in Medien. Es wird analysiert, wie diese Ereignisse in historischen und aktuellen Medienberichten dargestellt und diskutiert werden.</li>
-                    <li><strong>Interdisziplinäre Ansätze:</strong> Es wird erarbeitet, wie NLP-Technologien neue Perspektiven auf kulturelle, historische und gesellschaftliche Fragestellungen eröffnen können. Dabei wird auch reflektiert, wie diese Methoden traditionelle geisteswissenschaftliche Ansätze ergänzen und erweitern.</li>
-                </ul>
-            
-                <h3>Lernziele:</h3>
-                <ul>
-                    <li>Anwendung relevanter Python-Pakete für NLP-Aufgaben auf eigene Forschungsdaten</li>
-                    <li>Vorbereitung und Strukturierung großer Datensätze für die Analyse</li>
-                    <li>Einsatz von Transformer-Modellen und Large Language Models für NLP-Aufgaben mit umfangreichen Datenmengen</li>
-                    <li>Kritische Reflexion verschiedener Methoden (Methodenkritik)</li>
-                    <li>Verfassen eines wissenschaftlichen Papers zu den Forschungsergebnissen</li>
-                </ul>
-            </section>
-            
-            <section id="schedule">
-                <h2>Kursplan</h2>
-                <div class="session">
-                    <h3>Modul 1: 25. Oktober 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Einführung in das Thema, in den Kurs und NLP • Einführung Colab Notebooks • Crash Kurs Python 1</p>
-                </div>
-                <div class="session">
-                    <h3>Modul 2: 08. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Crash Kurs Python 2 • Einführung in NLP mit SpaCy</p>
-                </div>
-                <div class="session">
-                    <h3>Modul 3: 15. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Das Deutsche Zeitungsportal: Einführung und API-Nutzung<br>
-                    (Gäste: Lisa Landes und Michael Büchner von der Deutschen Digitalen Bibliothek)</p>
-                </div>
-                <div class="session">
-                    <h3>Modul 4: 22. November 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Transformer Modelle für die semantische Suche</p>
-                </div>
-                <div class="session">
-                    <h3>Modul 5: 6. Dezember 2024 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Große Sprachmodelle für Artikelsegmentierung und Post-OCR-Korrektur</p>
-                </div>
-                <div class="session">
-                    <h3>Modul 6: 10. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Named Entity Recognition und Textklassifizierung</p>
-                </div>
-                <div class="session">
-                    <h3>Modul 7: 24. Januar 2025 (10:00 Uhr bis 11:30 Uhr)</h3>
-                    <p>Individuelle Besprechungstermine</p>
-                </div>
-            </section>
-            <section id="modules">
-                <h2>Module und Worksloads</h2>
-                <div class="session">
-                  <h3>Module 1</h3>
-                    
-                  <h4>Vorbereitung auf Modul 1:</h4>
-                  <ul>
-                    <li>GitHub und HuggingFace Accounts erstellen (siehe Anleitungen GitHub und HuggingFace unter „Wichtige Links").</li>
-                    <li>Google Colab Documentation (siehe ebenfalls unter „Wichtige Links") öffnen und Schritt 1 bis 4 ausführen.</li>
-                  </ul>
-                  <h4>Notebooks</h4>
-                  <div style="display: flex; align-items: center; gap: 10px;">
-                    <p style="margin: 0;">Python_CrashCourse_1</p>
-                    <a href="https://colab.research.google.com/github/ieg-dhr/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/blob/main/Python_CrashCourse_1.ipynb" target="_blank">
-                      <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open Python_CrashCourse_1 In Colab"/>
-                    </a>
-                  </div>
-                  &nbsp;
-                  <h4>Literatur:</h4> 
-                  <p>[Hier Literaturangaben einfügen]</p>
-                </div>
-             </section>
-             <section id="literature">
-                <h2>Literaturliste</h2>
-                <div class="session">
-                   
-                </div>
-             </section>
-        </main>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 NLP-Kurs DMGK. Alle Rechte vorbehalten.</p>
-    </footer>
-</body>
-</html>
+<footer>
+    <p>&copy; 2024 NLP Course DMGK. All rights reserved.</p>
+</footer>
