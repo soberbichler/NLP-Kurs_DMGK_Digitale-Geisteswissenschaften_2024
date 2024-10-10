@@ -10,9 +10,54 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        #glossaryForm {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        #glossaryForm label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        #glossaryForm input[type="text"],
+        #glossaryForm textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        #glossaryForm textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        #glossaryForm input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #glossaryForm input[type="submit"]:hover {
+            background-color: #45a049;
         }
         #glossaryList {
             margin-top: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .glossary-section {
             margin-bottom: 20px;
@@ -22,24 +67,28 @@
             font-weight: bold;
             border-bottom: 2px solid #333;
             margin-bottom: 10px;
+            color: #333;
         }
         .glossary-item {
             margin-bottom: 10px;
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
         }
         .term {
             font-weight: bold;
+            color: #2c3e50;
         }
     </style>
 </head>
 <body>
     <h1>Interactive Glossary</h1>
 
-    <h3>Term Submission Form</h3>
     <form id="glossaryForm">
-        <label for="term">Term:</label><br>
-        <input type="text" id="term" name="term" required><br>
-        <label for="definition">Definition:</label><br>
-        <textarea id="definition" name="definition" required></textarea><br>
+        <h3>Add New Term</h3>
+        <label for="term">Term:</label>
+        <input type="text" id="term" name="term" required>
+        <label for="definition">Definition:</label>
+        <textarea id="definition" name="definition" required></textarea>
         <input type="submit" value="Submit Term">
     </form>
 
@@ -51,7 +100,6 @@
         const glossaryList = document.getElementById('glossaryList');
         let glossary = [];
 
-        // Load glossary from localStorage when the page loads
         function loadGlossary() {
             const savedGlossary = localStorage.getItem('glossary');
             if (savedGlossary) {
@@ -60,7 +108,6 @@
             }
         }
 
-        // Save glossary to localStorage
         function saveGlossary() {
             localStorage.setItem('glossary', JSON.stringify(glossary));
         }
@@ -107,7 +154,6 @@
             });
         }
 
-        // Load the glossary when the page loads
         loadGlossary();
     </script>
 </body>
