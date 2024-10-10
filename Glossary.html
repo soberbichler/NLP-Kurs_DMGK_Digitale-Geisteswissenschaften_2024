@@ -14,8 +14,17 @@
         #glossaryList {
             margin-top: 20px;
         }
+        .glossary-section {
+            margin-bottom: 20px;
+        }
+        .section-header {
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom: 2px solid #333;
+            margin-bottom: 10px;
+        }
         .glossary-item {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
         .term {
             font-weight: bold;
@@ -40,7 +49,21 @@
     <script>
         const glossaryForm = document.getElementById('glossaryForm');
         const glossaryList = document.getElementById('glossaryList');
-        const glossary = [];
+        let glossary = [];
+
+        // Load glossary from localStorage when the page loads
+        function loadGlossary() {
+            const savedGlossary = localStorage.getItem('glossary');
+            if (savedGlossary) {
+                glossary = JSON.parse(savedGlossary);
+                updateGlossaryDisplay();
+            }
+        }
+
+        // Save glossary to localStorage
+        function saveGlossary() {
+            localStorage.setItem('glossary', JSON.stringify(glossary));
+        }
 
         glossaryForm.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -48,6 +71,7 @@
             const definition = document.getElementById('definition').value;
             
             glossary.push({ term, definition });
+            saveGlossary();
             updateGlossaryDisplay();
             
             glossaryForm.reset();
@@ -57,13 +81,34 @@
             glossaryList.innerHTML = '';
             glossary.sort((a, b) => a.term.localeCompare(b.term));
             
+            const sections = {};
+            
             glossary.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.className = 'glossary-item';
-                itemElement.innerHTML = `<span class="term">${item.term}:</span> ${item.definition}`;
-                glossaryList.appendChild(itemElement);
+                const firstLetter = item.term[0].toUpperCase();
+                if (!sections[firstLetter]) {
+                    sections[firstLetter] = [];
+                }
+                sections[firstLetter].push(item);
+            });
+            
+            Object.keys(sections).sort().forEach(letter => {
+                const sectionElement = document.createElement('div');
+                sectionElement.className = 'glossary-section';
+                sectionElement.innerHTML = `<div class="section-header">${letter}</div>`;
+                
+                sections[letter].forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'glossary-item';
+                    itemElement.innerHTML = `<span class="term">${item.term}:</span> ${item.definition}`;
+                    sectionElement.appendChild(itemElement);
+                });
+                
+                glossaryList.appendChild(sectionElement);
             });
         }
+
+        // Load the glossary when the page loads
+        loadGlossary();
     </script>
 </body>
 </html>
