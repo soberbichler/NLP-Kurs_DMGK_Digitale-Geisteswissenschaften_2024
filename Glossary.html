@@ -15,20 +15,21 @@
         h1, h3 {
             color: #333;
         }
-        #glossaryForm {
+        #glossaryForm, #searchContainer, #glossaryList {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
-        #glossaryForm label {
+        #glossaryForm label, #searchContainer label {
             display: block;
             margin-bottom: 5px;
             color: #555;
         }
         #glossaryForm input[type="text"],
-        #glossaryForm textarea {
+        #glossaryForm textarea,
+        #searchInput {
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
@@ -51,13 +52,6 @@
         }
         #glossaryForm input[type="submit"]:hover {
             background-color: #45a049;
-        }
-        #glossaryList {
-            margin-top: 20px;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .glossary-section {
             margin-bottom: 20px;
@@ -92,12 +86,18 @@
         <input type="submit" value="Submit Term">
     </form>
 
+    <div id="searchContainer">
+        <h3>Search Glossary</h3>
+        <input type="text" id="searchInput" placeholder="Type to search...">
+    </div>
+
     <h3>Glossary</h3>
     <div id="glossaryList"></div>
 
     <script>
         const glossaryForm = document.getElementById('glossaryForm');
         const glossaryList = document.getElementById('glossaryList');
+        const searchInput = document.getElementById('searchInput');
         let glossary = [];
 
         function loadGlossary() {
@@ -124,13 +124,23 @@
             glossaryForm.reset();
         });
 
+        searchInput.addEventListener('input', function() {
+            updateGlossaryDisplay();
+        });
+
         function updateGlossaryDisplay() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredGlossary = glossary.filter(item => 
+                item.term.toLowerCase().includes(searchTerm) || 
+                item.definition.toLowerCase().includes(searchTerm)
+            );
+
             glossaryList.innerHTML = '';
-            glossary.sort((a, b) => a.term.localeCompare(b.term));
+            filteredGlossary.sort((a, b) => a.term.localeCompare(b.term));
             
             const sections = {};
             
-            glossary.forEach(item => {
+            filteredGlossary.forEach(item => {
                 const firstLetter = item.term[0].toUpperCase();
                 if (!sections[firstLetter]) {
                     sections[firstLetter] = [];
