@@ -45,7 +45,7 @@ h1 {
     margin: 0 auto;
 }
 .sidebar {
-    width: 280px;
+    width: 250px;
     background-color: white;
     padding: 1.5rem;
     border-radius: 8px;
@@ -74,7 +74,7 @@ h1 {
     color: #333;
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 1.1em;
+    font-size: 0.9em;
     display: block;
     padding: 0.5rem 0;
 }
