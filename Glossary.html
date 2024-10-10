@@ -1,9 +1,69 @@
- <h3>Sample Term Submission Form</h3>
-  <form onsubmit="event.preventDefault(); alert('Term submitted (demo only)');">
-    <label for="term">Term:</label><br>
-    <input type="text" id="term" name="term" required><br>
-    <label for="definition">Definition:</label><br>
-    <textarea id="definition" name="definition" required></textarea><br>
-    <input type="submit" value="Submit Term">
-  </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Glossary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #glossaryList {
+            margin-top: 20px;
+        }
+        .glossary-item {
+            margin-bottom: 15px;
+        }
+        .term {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Glossary</h1>
+
+    <h3>Term Submission Form</h3>
+    <form id="glossaryForm">
+        <label for="term">Term:</label><br>
+        <input type="text" id="term" name="term" required><br>
+        <label for="definition">Definition:</label><br>
+        <textarea id="definition" name="definition" required></textarea><br>
+        <input type="submit" value="Submit Term">
+    </form>
+
+    <h3>Glossary</h3>
+    <div id="glossaryList"></div>
+
+    <script>
+        const glossaryForm = document.getElementById('glossaryForm');
+        const glossaryList = document.getElementById('glossaryList');
+        const glossary = [];
+
+        glossaryForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const term = document.getElementById('term').value;
+            const definition = document.getElementById('definition').value;
+            
+            glossary.push({ term, definition });
+            updateGlossaryDisplay();
+            
+            glossaryForm.reset();
+        });
+
+        function updateGlossaryDisplay() {
+            glossaryList.innerHTML = '';
+            glossary.sort((a, b) => a.term.localeCompare(b.term));
+            
+            glossary.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.className = 'glossary-item';
+                itemElement.innerHTML = `<span class="term">${item.term}:</span> ${item.definition}`;
+                glossaryList.appendChild(itemElement);
+            });
+        }
+    </script>
+</body>
+</html>
