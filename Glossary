@@ -1,1 +1,9 @@
-
+ <h3>Sample Term Submission Form</h3>
+  <form onsubmit="event.preventDefault(); alert('Term submitted (demo only)');">
+    <label for="term">Term:</label><br>
+    <input type="text" id="term" name="term" required><br>
+    <label for="definition">Definition:</label><br>
+    <textarea id="definition" name="definition" required></textarea><br>
+    <input type="submit" value="Submit Term">
+  </form>
+</div>
