@@ -28,7 +28,7 @@
             max-width: 300px;
         }
         .side-column-right {
-            flex: 0 0 200px; /* Fixed width of 200px */
+            flex: 0 0 200px;
         }
         .main-column {
             flex: 2;
@@ -55,16 +55,17 @@
             height: 100px;
             resize: vertical;
         }
-        input[type="submit"] {
+        button, input[type="submit"] {
             background-color: #4CAF50;
             color: white;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
+            margin-right: 5px;
         }
-        input[type="submit"]:hover {
+        button:hover, input[type="submit"]:hover {
             background-color: #45a049;
         }
         .glossary-section {
@@ -85,6 +86,15 @@
         .term {
             font-weight: bold;
             color: #2c3e50;
+        }
+        .edit-delete-buttons {
+            float: right;
+        }
+        .edit-button {
+            background-color: #3498db;
+        }
+        .delete-button {
+            background-color: #e74c3c;
         }
     </style>
 </head>
@@ -134,7 +144,7 @@
             const term = document.getElementById('term').value;
             const definition = document.getElementById('definition').value;
             
-            glossary.push({ term, definition });
+            glossary.push({ term, definition, id: Date.now() });
             saveGlossary();
             updateGlossaryDisplay();
             
@@ -173,12 +183,40 @@
                 sections[letter].forEach(item => {
                     const itemElement = document.createElement('div');
                     itemElement.className = 'glossary-item';
-                    itemElement.innerHTML = `<span class="term">${item.term}:</span> ${item.definition}`;
+                    itemElement.innerHTML = `
+                        <span class="term">${item.term}:</span> ${item.definition}
+                        <div class="edit-delete-buttons">
+                            <button class="edit-button" onclick="editEntry(${item.id})">Edit</button>
+                            <button class="delete-button" onclick="deleteEntry(${item.id})">Delete</button>
+                        </div>
+                    `;
                     sectionElement.appendChild(itemElement);
                 });
                 
                 glossaryList.appendChild(sectionElement);
             });
+        }
+
+        function editEntry(id) {
+            const entry = glossary.find(item => item.id === id);
+            if (entry) {
+                const newTerm = prompt("Edit term:", entry.term);
+                const newDefinition = prompt("Edit definition:", entry.definition);
+                if (newTerm !== null && newDefinition !== null) {
+                    entry.term = newTerm;
+                    entry.definition = newDefinition;
+                    saveGlossary();
+                    updateGlossaryDisplay();
+                }
+            }
+        }
+
+        function deleteEntry(id) {
+            if (confirm("Are you sure you want to delete this entry?")) {
+                glossary = glossary.filter(item => item.id !== id);
+                saveGlossary();
+                updateGlossaryDisplay();
+            }
         }
 
         loadGlossary();
