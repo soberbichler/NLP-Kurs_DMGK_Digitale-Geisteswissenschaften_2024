@@ -68,7 +68,6 @@
             border-radius: 3px;
             cursor: pointer;
             font-size: 12px;
-            margin-right: 5px;
         }
         button:hover, input[type="submit"]:hover {
             background-color: #e0e0e0;
@@ -87,26 +86,17 @@
             margin-bottom: 8px;
             padding: 3px 0;
             font-size: 14px;
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
         }
         .term {
             font-weight: bold;
             margin-right: 5px;
         }
-        .edit-delete-buttons {
-            margin-top: 5px;
-        }
-        .edit-delete-buttons button {
+        .delete-button {
             padding: 2px 5px;
             font-size: 11px;
-        }
-        .editable {
-            border: 1px solid transparent;
-            padding: 2px;
-            border-radius: 3px;
-        }
-        .editable:focus {
-            border-color: #aaa;
-            outline: none;
         }
     </style>
 </head>
@@ -194,31 +184,14 @@
                     const itemElement = document.createElement('div');
                     itemElement.className = 'glossary-item';
                     itemElement.innerHTML = `
-                        <div>
-                            <span class="term" contenteditable="true" onblur="updateEntry(${item.id}, this, 'term')">${item.term}:</span>
-                            <span contenteditable="true" onblur="updateEntry(${item.id}, this, 'definition')">${item.definition}</span>
-                        </div>
-                        <div class="edit-delete-buttons">
-                            <button onclick="deleteEntry(${item.id})">Delete</button>
-                        </div>
+                        <div><span class="term">${item.term}:</span> ${item.definition}</div>
+                        <button class="delete-button" onclick="deleteEntry(${item.id})">Delete</button>
                     `;
                     sectionElement.appendChild(itemElement);
                 });
                 
                 glossaryList.appendChild(sectionElement);
             });
-        }
-
-        function updateEntry(id, element, field) {
-            const entry = glossary.find(item => item.id === id);
-            if (entry) {
-                entry[field] = element.innerText.trim();
-                if (field === 'term') {
-                    entry.term = entry.term.replace(':', '');
-                }
-                saveGlossary();
-                updateGlossaryDisplay();
-            }
         }
 
         function deleteEntry(id) {
