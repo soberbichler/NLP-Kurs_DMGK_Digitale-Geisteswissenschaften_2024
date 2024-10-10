@@ -23,9 +23,12 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin: 0 10px;
         }
-        .side-column {
+        .side-column-left {
             flex: 1;
             max-width: 300px;
+        }
+        .side-column-right {
+            flex: 0 0 200px; /* Fixed width of 200px */
         }
         .main-column {
             flex: 2;
@@ -88,7 +91,7 @@
 <body>
     <h1>Interactive Glossary</h1>
     <div class="container">
-        <div class="column side-column">
+        <div class="column side-column-left">
             <h2>Add New Term</h2>
             <form id="glossaryForm">
                 <label for="term">Term:</label>
@@ -102,8 +105,8 @@
             <h2>Glossary</h2>
             <div id="glossaryList"></div>
         </div>
-        <div class="column side-column">
-            <h2>Search Glossary</h2>
+        <div class="column side-column-right">
+            <h2>Search</h2>
             <input type="text" id="searchInput" placeholder="Type to search...">
         </div>
     </div>
