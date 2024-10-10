@@ -7,29 +7,40 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
             background-color: #f0f0f0;
         }
-        h1, h3 {
-            color: #333;
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-        #glossaryForm, #searchContainer, #glossaryList {
+        .column {
             background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 20px;
+            margin: 0 10px;
         }
-        #glossaryForm label, #searchContainer label {
+        .side-column {
+            flex: 1;
+            max-width: 300px;
+        }
+        .main-column {
+            flex: 2;
+        }
+        h1, h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        label {
             display: block;
             margin-bottom: 5px;
             color: #555;
         }
-        #glossaryForm input[type="text"],
-        #glossaryForm textarea,
-        #searchInput {
+        input[type="text"],
+        textarea {
             width: 100%;
             padding: 8px;
             margin-bottom: 15px;
@@ -37,11 +48,11 @@
             border-radius: 4px;
             box-sizing: border-box;
         }
-        #glossaryForm textarea {
+        textarea {
             height: 100px;
             resize: vertical;
         }
-        #glossaryForm input[type="submit"] {
+        input[type="submit"] {
             background-color: #4CAF50;
             color: white;
             padding: 10px 15px;
@@ -50,7 +61,7 @@
             cursor: pointer;
             font-size: 16px;
         }
-        #glossaryForm input[type="submit"]:hover {
+        input[type="submit"]:hover {
             background-color: #45a049;
         }
         .glossary-section {
@@ -76,23 +87,26 @@
 </head>
 <body>
     <h1>Interactive Glossary</h1>
-
-    <form id="glossaryForm">
-        <h3>Add New Term</h3>
-        <label for="term">Term:</label>
-        <input type="text" id="term" name="term" required>
-        <label for="definition">Definition:</label>
-        <textarea id="definition" name="definition" required></textarea>
-        <input type="submit" value="Submit Term">
-    </form>
-
-    <div id="searchContainer">
-        <h3>Search Glossary</h3>
-        <input type="text" id="searchInput" placeholder="Type to search...">
+    <div class="container">
+        <div class="column side-column">
+            <h2>Add New Term</h2>
+            <form id="glossaryForm">
+                <label for="term">Term:</label>
+                <input type="text" id="term" name="term" required>
+                <label for="definition">Definition:</label>
+                <textarea id="definition" name="definition" required></textarea>
+                <input type="submit" value="Submit Term">
+            </form>
+        </div>
+        <div class="column main-column">
+            <h2>Glossary</h2>
+            <div id="glossaryList"></div>
+        </div>
+        <div class="column side-column">
+            <h2>Search Glossary</h2>
+            <input type="text" id="searchInput" placeholder="Type to search...">
+        </div>
     </div>
-
-    <h3>Glossary</h3>
-    <div id="glossaryList"></div>
 
     <script>
         const glossaryForm = document.getElementById('glossaryForm');
