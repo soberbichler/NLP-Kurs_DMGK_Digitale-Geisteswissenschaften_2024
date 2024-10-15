@@ -1,32 +1,29 @@
-# NLP-Kurs für digitale Geistes- und Kulturwissenschaften
+# NLP Course for Digital Humanities and Cultural Studies
 
-Dozentin: Dr. Sarah Oberbichler
+Instructor: Dr. Sarah Oberbichler
 
-Willkommen zum Repository des NLP-Kurses für Digitale Methoden in den Geisteswissenschaften 
-## Über den Kurs
+Welcome to the repository of the NLP course for Digital Methods in the Humanities
 
-Dieser Kurs bietet eine Einführung in die Verarbeitung natürlicher Sprache (NLP) und deren Anwendung in den digitalen Geisteswissenschaften. Der Kurs ist Teil des Masterstudiums "Digitale Methoden für Geistes- und Kutlurwissenschaften (DMGK)" in Mainz.
+## About the Course
 
-**Kurs-Website:** [https://ieg-dhr.github.io/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/](https://ieg-dhr.github.io/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/)
+This course offers an introduction to Natural Language Processing (NLP) and its application in digital humanities. The course is part of the Master's program "Digital Methods for Humanities and Cultural Studies (DMGK)" in Mainz.
 
-## Kursinhalte
+**Course Website:** [https://ieg-dhr.github.io/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/](https://ieg-dhr.github.io/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/)
 
-Der Kurs umfasst folgende Themen:
+## Course Contents
 
-- Einführung in NLP, Jupyter Notebooks und Python
-- Verwendung von SpaCy für NLP-Aufgaben
-- Einführung: Deutsches Zeitungsportal und derern API
-- Aktuelle Fortschritte im NLP: Transformer-Modelle für die semantische Suche und Textähnlichkeit (Word Embeddings)
-- Aktuelle Fortschritte im NLP: große Sprachmodelle (LLMs) für die Semantische Textextraktion (Artikelsegmentierung) und Post-OCR-Korrektur
-- Named Entity Recognition (NER) und Textklassifizierung
+The course covers the following topics:
+- Introduction to NLP, Jupyter Notebooks, and Python
+- Using SpaCy for NLP tasks
+- Introduction: German Newspaper Portal and its API
+- Recent advances in NLP: Transformer models for semantic search and text similarity (Word Embeddings)
+- Recent advances in NLP: Large Language Models (LLMs) for Semantic Text Extraction (Article Segmentation) and Post-OCR Correction
+- Named Entity Recognition (NER) and Text Classification
 
+## Repository Structure
 
-## Repository-Struktur
+- `index.html`: Main page of the course
+- `styles.css`: CSS stylesheet for the course website
+- `materials/`: Folder for course materials and resources
 
-- `index.html`: Hauptseite des Kurses
-- `styles.css`: CSS-Stilvorlage für die Kurswebsite
-- `materials/`: Ordner für Kursmaterialien und Ressourcen
-- `exercises/`: Praktische Übungen und Codebeispiele
-
-
-## Lizenz
+## License
