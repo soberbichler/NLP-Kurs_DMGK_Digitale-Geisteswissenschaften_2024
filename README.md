@@ -1,4 +1,4 @@
-Instructor and creator of the webpage: Sarah Oberbichler [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0002-1031-2759)
+Created by Sarah Oberbichler [![ORCID](https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png)](https://orcid.org/0000-0002-1031-2759)
 
 # NLP Course for Digital Humanities and Cultural Studies
 
