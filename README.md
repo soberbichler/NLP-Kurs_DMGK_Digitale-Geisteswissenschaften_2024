@@ -8,7 +8,7 @@ Welcome to the repository of the NLP course for Digital Methods in the Humanitie
 
 This course offers an introduction to Natural Language Processing (NLP) and its application in digital humanities. The course is part of the Master's program "Digital Methods for Humanities and Cultural Studies (DMGK)" in Mainz.
 
-**Course Website:** [https://ieg-dhr.github.io/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/](https://ieg-dhr.github.io/NLP-Kurs_DMGK_Digitale-Geisteswissenschaften/)
+**Course Website:** [https://ieg-dhr.github.io/NLP-Course4Humanities_2024/](https://ieg-dhr.github.io/NLP-Course4Humanities_2024/)
 
 ## Course Contents
 
